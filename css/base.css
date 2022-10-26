@@ -453,7 +453,16 @@ input[type="password"], textarea {
 }
 
 .filter-white{
-        filter: invert(100%) sepia(56%) saturate(2%) hue-rotate(203deg) brightness(110%) contrast(101%);
+    filter: invert(100%) sepia(56%) saturate(2%) hue-rotate(203deg) brightness(110%) contrast(101%);
+}
+
+.center-text {
+    text-align: center;
+}
+
+.middle-elem {
+    display: flex;
+    justify-content: center;
 }
 
 /* ------------------------------------------------------------------- 

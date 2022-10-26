@@ -3117,6 +3117,17 @@ html.no-csstransitions .home-content__main {
     color: #FFFFFF;
 }
 
+.contact-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-spaced {
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+}
+
 .contact__infos {
     font-size: 1.5rem;
 }
@@ -3206,6 +3217,9 @@ html.no-csstransitions .home-content__main {
     display: block;
 }
 
+.middle-elem {
+    justify-content: center;
+}
 
 /* --------------------------------------------------------------- 
  * loader animation - (_site-layout.scss)
