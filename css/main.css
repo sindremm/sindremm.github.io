@@ -3217,9 +3217,6 @@ html.no-csstransitions .home-content__main {
     display: block;
 }
 
-.middle-elem {
-    justify-content: center;
-}
 
 /* --------------------------------------------------------------- 
  * loader animation - (_site-layout.scss)
