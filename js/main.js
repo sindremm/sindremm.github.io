@@ -160,22 +160,30 @@
                     $caption = $folio.find('.item-folio__caption'),
                     $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
                     $captionText = $.trim($caption.html()),
-                    $href = $thumbLink.attr('href'),
-                    $size = $thumbLink.data('size').split('x'),
+                    $images = $folio.find(".item-folio__images > .thumb-im");
+                
+                var item_collection = []
+                
+                $images.each( function() {
+                    var $image = $(this),
+                    $size = $image.data('size').split('x'),
                     $width  = $size[0],
                     $height = $size[1];
-         
-                var item = {
-                    src  : $href,
-                    w    : $width,
-                    h    : $height
-                }
 
-                if ($caption.length > 0) {
-                    item.title = $.trim($titleText + $captionText);
-                }
+                    var item = {
+                        src  : $image.attr("href"),
+                        w    : $width,
+                        h    : $height
+                    }
 
-                items.push(item);
+                    if ($caption.length > 0) {
+                        item.title = $.trim($titleText + $captionText);
+                    }
+                    item_collection.push(item);
+
+                });
+
+                items.push(item_collection);
             });
 
             // bind click event
@@ -184,12 +192,12 @@
                 $(this).on('click', function(e) {
                     e.preventDefault();
                     var options = {
-                        index: i,
+                        index: 0,
                         showHideOpacity: true
                     }
 
                     // initialize PhotoSwipe
-                    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+                    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items[i], options);
                     lightBox.init();
                 });
 
