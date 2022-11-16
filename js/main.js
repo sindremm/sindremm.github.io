@@ -155,7 +155,6 @@
             $folioItems.each( function(i) {
 
                 var $folio = $(this),
-                    $thumbLink =  $folio.find('.thumb-link'),
                     $title = $folio.find('.item-folio__title'),
                     $caption = $folio.find('.item-folio__caption'),
                     $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
@@ -187,7 +186,7 @@
             });
 
             // bind click event
-            $folioItems.each(function(i) {
+            $folioItems.find(".item-folio__thumb").each(function(i) {
 
                 $(this).on('click', function(e) {
                     e.preventDefault();
