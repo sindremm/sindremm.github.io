@@ -2355,6 +2355,7 @@ html.no-csstransitions .home-content__main {
 .s-works {
     padding-top: 15rem;
     padding-bottom: 15.6rem;
+    height: 100%;
     background-color: #f1f1f1;
     position: relative;
 }
@@ -3051,7 +3052,9 @@ html.no-csstransitions .home-content__main {
     background-repeat: no-repeat;
     background-position: center, center;
     padding-top: 13.2rem;
-    padding-bottom: 12rem;
+    padding-bottom: 20rem;
+    height: 70%;
+    min-height: 50px;
     color: rgba(255, 255, 255, 0.5);
     position: relative;
 }
@@ -3323,6 +3326,8 @@ footer {
     font-size: 14px;
     padding: 6.6rem 0 4.2rem;
     text-align: center;
+    height: 30%;
+    min-height: 30px;
     color: rgba(255, 255, 255, 0.2);
 }
 
