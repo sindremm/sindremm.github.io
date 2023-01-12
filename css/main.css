@@ -2353,9 +2353,9 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 
 .s-works {
-    padding-top: 15rem;
-    padding-bottom: 15.6rem;
-    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    min-height: fit-content;
     background-color: #f1f1f1;
     position: relative;
 }
