@@ -34,6 +34,36 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+<!-- splide
+    ================================================== -->
+    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/themes/splide-red-theme.css">
+    <link rel="stylesheet" href="./node_modules/@splidejs/splide-extension-video/dist/css/splide-extension-video.min.css">
+
+    <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="./node_modules/@splidejs/splide-extension-video/dist/js/splide-extension-video.min.js">
+        import { Splide } from '@splidejs/splide';
+        import { Video } from '@splidejs/splide-extension-video';
+        import '@splidejs/splide-extension-video/dist/css/splide-extension-video.min.css';
+    </script>
+
+
+    <script type="module">
+
+        document.addEventListener( 'DOMContentLoaded', function() {
+          var splide = new Splide( '.splide', {
+            heightRatio: 0.5,
+            Video: {
+                autoplay: true,
+            },
+          } );
+          splide.mount( {Video} );
+        } );
+
+    </script>
+
+    
+
+    
 </head>
 
 <body id="top">
@@ -199,13 +229,14 @@
 
                         <div class="item-folio__thumb">
                             <a class="thumb-link" >
-                                <img src="images/portfolio/PCBThumbLarge.jpg"
-                                     srcset="images/portfolio/PCBThumbSmall.jpg 1, images/portfolio/PCBThumbLarge.jpg 2" alt="">
+                                <img src="images/portfolio/NewPCBTLarge.jpg"
+                                     srcset="images/portfolio/NewPCBTSmall.jpg 1, images/portfolio/NewPCBTLarge.jpg 2" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
 
                         <div class="item-folio__images">
+                            <a href="images/portfolio/PCB/Distortionator.jpg" class="thumb-im" data-size="2048x1536"></a>
                             <a href="images/portfolio/PCB/FinishedPCB.jpg" class="thumb-im" data-size="2048x1536">
                             <a href="images/portfolio/PCB/SideVew.jpg" class="thumb-im" data-size="1587x633">
                             <a href="images/portfolio/PCB/TopView.jpg" class="thumb-im" data-size="1307x583">
@@ -270,6 +301,38 @@
 
             </div>
         </div>
+
+        <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                        <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                            <img src="images/portfolio/UTFImaging/ScreamUTF.jpg" alt="err 0">
+                        </li>
+
+                        <li class="splide__slide" data-splide-html-video="images/portfolio/PCB/EffectPedal.mp4">
+                            <img src="images/portfolio/PCB/FinishedPCB.jpg">
+                          </li>
+
+                        <li class="splide__slide">
+                            <img class="splide__image" src="images/portfolio/UTFImaging/ApplicationUI.jpg" alt="err 1">
+                        </li>
+
+                        <li class="splide__slide">
+                            <img src="images/portfolio/UTFImaging/MonaLisaUTF.jpg" alt="err 2">
+                        </li>
+                        
+                        <li class="splide__slide">
+                            <img src="images/portfolio/UTFImaging/ScreamUTF.jpg" alt="err 3">
+                        </li>
+
+                        <li class="splide__slide">
+                            <img src="images/portfolio/UTFImaging/StarryNightUTF.jpg" alt="err 4">
+                        </li>
+
+                      
+                  </ul>
+            </div>
+          </section>
 
     </section> <!-- end works -->
 
