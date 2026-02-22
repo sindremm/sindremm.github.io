@@ -63,7 +63,7 @@
             hdr = $('header'),
             triggerHeight = hero.outerHeight() - 170,
             homeHeight = triggerHeight + 140,
-            hbar = $('.s-header.sticky');
+            hbar = $('.s-header');
 
         $WIN.on('scroll', function () {
 
