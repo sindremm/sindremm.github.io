@@ -819,6 +819,10 @@ input[type="button"].btn--primary {
     border-color: #0D0A0B;
     color: #FFFFFF;
 }
+.btn.btn--primary[type="resume"]{
+    color: #ebb31a;
+}
+
 
 .btn.btn--primary:hover, 
 button.btn--primary:hover, 
@@ -1656,6 +1660,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     display: block;
     line-height: 72px;
     color: #FFFFFF;
+}
+
+.header-nav li a[title="resume"] {
+    display: block;
+    line-height: 72px;
+    color: #ebb31a;
 }
 
 .header-nav li.current a {
