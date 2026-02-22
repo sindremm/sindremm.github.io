@@ -61,30 +61,49 @@
 
         var hero = $('.page-hero'),
             hdr = $('header'),
-            triggerHeight = hero.outerHeight() - 170;
-
+            triggerHeight = hero.outerHeight() - 170,
+            homeHeight = triggerHeight + 140,
+            hbar = $('.s-header.sticky');
 
         $WIN.on('scroll', function () {
 
             var loc = $WIN.scrollTop();
 
-            if (loc > triggerHeight) {
-                hdr.addClass('sticky');
-            } else {
-                hdr.removeClass('sticky');
-            }
+            // if (loc > triggerHeight) {
+            //     hdr.addClass('sticky');
+            // } else {
+            //     hdr.removeClass('sticky');
+            // }
 
-            if (loc > triggerHeight + 20) {
-                hdr.addClass('offset');
-            } else {
-                hdr.removeClass('offset');
-            }
+            // if (loc > triggerHeight + 20) {
+            //     hdr.addClass('offset');
+            // } else {
+            //     hdr.removeClass('offset');
+            // }
 
-            if (loc > triggerHeight + 150) {
-                hdr.addClass('scrolling');
+            // if (loc > triggerHeight + 150) {
+            //     hdr.addClass('scrolling');
+            // } else {
+            //     hdr.removeClass('scrolling');
+            // }
+
+            // if (loc > homeHeight) {
+            //     hdr.addClass('triggered');
+            // } else {
+            //     hdr.removeClass('triggered');
+            // }
+
+
+            // Set opacity of header
+            var op;
+            if (loc < triggerHeight) {
+                op = 1 - (triggerHeight - loc)/triggerHeight;
             } else {
-                hdr.removeClass('scrolling');
+                op = 0.999;
             }
+            var color = 'rgba(0, 0, 0, ' + parseFloat(op) + ')';
+            hbar.css('background-color', color);
+
 
         });
 

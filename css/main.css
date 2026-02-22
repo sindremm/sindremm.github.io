@@ -1474,8 +1474,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     -webkit-transform: translate3d(0, -100%, 0);
     -ms-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    /* -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; */
 }
 
 .s-header.scrolling {
@@ -1484,10 +1484,14 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     transform: translate3d(0, 0, 0);
 }
 
+.s-header.triggered {
+    color: red;
+}
+
 .s-header.sticky {
     position: fixed;
     top: 0;
-    background-color: #000000 !important;
+    background-color: #000000;
     opacity: 0;
     visibility: hidden;
     z-index: 600;
@@ -1504,6 +1508,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .s-header.sticky.scrolling {
     opacity: 1;
     visibility: visible;
+    will-change: background-color;
 }
 
 
