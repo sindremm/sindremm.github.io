@@ -4149,3 +4149,28 @@ article.blog-single .blog-content {
         display: none;
     }
 }
+/*----------------------------------------------
+* -------------- My additions ------------------
+------------------------------------------------ */
+
+.two-fold {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 35% 85%;
+    column-gap: 50px;
+    width: 80rem;
+}
+
+p.img-text {
+    font-family: "montserrat-regular", sans-serif;
+    font-size: 2rem;
+    line-height: 1.8;
+    margin-bottom: 0rem;
+    color: #0D0A0B;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
